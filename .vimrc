@@ -1,7 +1,3 @@
-set encoding=utf-8                                    "设置gvim内部编码
-set fileencoding=utf-8                                "设置当前文件编码
-set fileencodings=ucs-bom,utf-8,gbk,cp936,latin-1     "设置支持打开的文件的编码
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -80,7 +76,11 @@ Glaive codefmt google_java_executable="java -jar /path/to/google-java-format-VER
 
 
 
-let g:ycm_global_ycm_extra_conf = '/home/lgy/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+""let g:ycm_global_ycm_extra_conf = '/home/lgy/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+""let g:ycm_collect_identifiers_from_tags_files = 1
+""let g:ycm_confirm_extra_conf = 1
+"let g:ycm_extra_conf_globlist = ['/home/lgy/Documents/xen_arm/xen']
+
 
 inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
@@ -91,7 +91,10 @@ inoremap { {}<ESC>i<CR><ESC>V<O
 set shiftwidth=4
 
 
-:colorscheme elflord
+
+
+
+
 
 set ts=4
 set expandtab
@@ -112,17 +115,17 @@ let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 
 
-augroup autoformat_settings
-  autocmd FileType bzl AutoFormatBuffer buildifier
-  autocmd FileType cpp,c,proto,javascript AutoFormatBuffer clang-format
-  autocmd FileType dart AutoFormatBuffer dartfmt
-  autocmd FileType go AutoFormatBuffer gofmt
-  autocmd FileType gn AutoFormatBuffer gn
-  autocmd FileType html,css,json AutoFormatBuffer js-beautify
-  autocmd FileType java AutoFormatBuffer google-java-format
-  autocmd FileType python AutoFormatBuffer yapf
-  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
-augroup END
+""augroup autoformat_settings
+""  autocmd FileType bzl AutoFormatBuffer buildifier
+""  "autocmd FileType cpp,c,proto,javascript AutoFormatBuffer clang-format
+""  autocmd FileType dart AutoFormatBuffer dartfmt
+""  autocmd FileType go AutoFormatBuffer gofmt
+""  autocmd FileType gn AutoFormatBuffer gn
+""  autocmd FileType html,css,json AutoFormatBuffer js-beautify
+""  autocmd FileType java AutoFormatBuffer google-java-format
+""  autocmd FileType python AutoFormatBuffer yapf
+""  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+""augroup END
 
 " Some Linux distributions set filetype in /etc/vimrc.  
 " Clear filetype flags before changing runtimepath to force Vim to reload them.  
@@ -136,10 +139,7 @@ syntax on
 
 
 
-set cursorcolumn
-set cursorline
-highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
-highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+
 
 "taglist
 let Tlist_WinWidth=40        "设置taglist宽度
@@ -190,3 +190,18 @@ let g:tagbar_type_go = {
 
 
 let g:ycm_key_invoke_completion = '<F7>'
+
+"let g:solarized_termtrans=1
+"syntax enable
+"set background=dark
+"colorscheme solarized
+colorscheme elflord
+
+set cursorcolumn
+set cursorline
+highlight CursorLine   cterm=NONE ctermbg=238 guibg=NONE guifg=NONE
+highlight CursorColumn cterm=NONE ctermbg=238 guibg=NONE guifg=NONE
+hi Normal ctermbg=black ctermfg=white 
+set t_ti= t_te=
+set hlsearch
+":map <C-[> g <C-]>
