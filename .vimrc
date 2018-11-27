@@ -44,13 +44,14 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 set number
 
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'Lokaltog/vim-powerline'
+""Bundle 'powerline/powerline'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'fatih/vim-go'
@@ -82,11 +83,11 @@ Glaive codefmt google_java_executable="java -jar /path/to/google-java-format-VER
 "let g:ycm_extra_conf_globlist = ['/home/lgy/Documents/xen_arm/xen']
 
 
-inoremap ' ''<ESC>i
-inoremap " ""<ESC>i
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap { {}<ESC>i<CR><ESC>V<O
+""inoremap ' ''<ESC>i
+""inoremap " ""<ESC>i
+""inoremap ( ()<ESC>i
+""inoremap [ []<ESC>i
+""inoremap { {}<ESC>i<CR><ESC>V<O
 
 set shiftwidth=4
 
@@ -112,6 +113,8 @@ nmap <silent> <F8> :TagbarToggle<CR>
 
 
 let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set t_Co=256
 set encoding=utf-8
 
 
@@ -189,6 +192,8 @@ let g:tagbar_type_go = {
 \ }
 
 
+let g:go_version_warning = 0
+
 let g:ycm_key_invoke_completion = '<F7>'
 
 "let g:solarized_termtrans=1
@@ -202,6 +207,6 @@ set cursorline
 highlight CursorLine   cterm=NONE ctermbg=238 guibg=NONE guifg=NONE
 highlight CursorColumn cterm=NONE ctermbg=238 guibg=NONE guifg=NONE
 hi Normal ctermbg=black ctermfg=white 
-set t_ti= t_te=
+""set t_ti= t_te=
 set hlsearch
 ":map <C-[> g <C-]>
